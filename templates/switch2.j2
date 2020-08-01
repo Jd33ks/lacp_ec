@@ -1,0 +1,19 @@
+{% for item in trunk_ports %} 
+ 
+{% for trunk in item.ports %} 
+{% if "-" in trunk|string %} 
+interface range {{ trunk }} 
+{% else %} 
+interface {{ trunk }} 
+{% endif %} 
+  {% if item.description is defined %} 
+  description {{ item.description }} 
+  {% endif %} 
+  switchport mode trunk 
+  no shutdown 
+  {% if item.group is defined %} 
+  channel-group {{ item.group }} mode active 
+  {% endif %} 
+{% endfor %}  
+
+{% endfor %}

@@ -1,0 +1,15 @@
+---
+# Default connectivity variables
+ansible_user: "admin"
+ansible_ssh_pass: "admin"
+ansible_network_os: "ios"
+ansible_connection: "network_cli"
+
+# global config variables
+
+
+
+  
+
+
+

@@ -1,0 +1,28 @@
+---
+- name: access switch configs
+  hosts: LAB_SWITCH_1
+  gather_facts: no
+  connection: local
+  
+  tasks:
+
+    - name: SW1_Configure_a_port_channel
+      ios_config:
+        src: templates/switch1.j2
+        
+
+- name: access switch configs
+  hosts: LAB_SWITCH_2
+  gather_facts: no
+  connection: local
+  
+  tasks:
+
+    - name: SW2_Configure_a_port_channel # The name of the task
+      ios_config:
+        src: templates/switch2.j2
+        
+
+
+
+

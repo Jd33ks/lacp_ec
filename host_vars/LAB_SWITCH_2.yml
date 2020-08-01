@@ -1,0 +1,6 @@
+---
+trunk_ports: 
+  - { group: 1, ports: ['Gi1/0/25 - 26'], description: -> CHANNEL TO LABSWITCH1 }
+
+
+  
